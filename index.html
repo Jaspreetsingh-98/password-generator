@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <h1 class="heading">Password Generator</h1>
+        <div class="container1">
+          <input
+            readonly
+            placeholder="PASSWORD"
+            class="showpassword"
+            data-passwordShow
+          />
+          <button class="copybtn" data-copyImg>
+            <span class="copiedmsg" data-copyMsg></span>
+            <img src="copy.svg" alt="copyimg" height="23" width="23" />
+          </button>
+        </div>
+        <div class="container2">
+          <div class="passnum">
+            <h2 class="pass">Pasword Length</h2>
+            <p class="passwordnumber" data-passwordLength>0</p>
+          </div>
+          <div>
+            <input
+              type="range"
+              min="1"
+              max="20"
+              step="1"
+              class="slider"
+              data-sliderHandel
+            />
+          </div>
+          <div class="checkboxes">
+            <div class="box">
+              <input type="checkbox" class="uppercase" data-upperCaseletter />
+              <label for="uppercase">Includes Uppercase letters</label>
+            </div>
+            <div class="box">
+              <input type="checkbox" class="lowercase" data-lowerCaseletter />
+              <label for="lowercase">Includes Uppercase letters</label>
+            </div>
+            <div class="box">
+              <input type="checkbox" class="number" data-numberBox />
+              <label for="number">Includes Uppercase letters</label>
+            </div>
+            <div class="box">
+              <input type="checkbox" class="symbol" data-symbolBox />
+              <label for="symbol">Includes Uppercase letters</label>
+            </div>
+          </div>
+          <div class="strength">
+            <h2>Strength</h2>
+            <div class="strengthcolor" data-colorStrenght></div>
+          </div>
+
+          <button class="passbutton" data-passwordGenrator>
+            GENERATE PASSWORD
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
